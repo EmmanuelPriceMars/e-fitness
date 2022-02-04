@@ -10,19 +10,50 @@ body {
     margin: auto;
     margin-top: 50px;
     text-align: center;
+     color: #08FF08;
 }
+
+.nav-item{
+    color: #08FF08;
+}
+
+
+
 
 .circle {
 
     height: 150px;
     width: 150px;
-    background-color: #bbb;
     border-radius: 50%;
     alignment: center;
 position: relative;
     top: 300px;
     margin: auto;
+
+    background-color: #0CB1C4;
+    animation-name: spin;
+    animation-duration: 100000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+background-image: radial-gradient(yellow, white);
 }
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
 
 img{
     height: 200px;
@@ -33,8 +64,71 @@ img{
 
 
 }
-p {
-    color: #08FF08;
-    font-size: 25px;
-    font-style: cursive;
+
+
+
+
+.dot1{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: pink;
+    position: relative;
+    left: 300px;
+}
+
+
+.dot2{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: brown;
+    position: relative;
+    bottom: -250px;
+
+}
+
+.dot3{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: green;
+    position: relative;
+    right: 150px;
+
+}
+
+.dot4{  height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: blue;
+    position: relative;
+    right: 100px;
+
+
+}
+
+.dot5{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: darkred;
+    position: relative;
+    right: -300px;
+
+}
+
+.dot6{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: yellow;
+    position: relative;
+    right: -200px;
+
+}
+
+img {
+    position: relative;
+    bottom: 130px;
 }
