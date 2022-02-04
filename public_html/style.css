@@ -1,5 +1,40 @@
 
 body {
-    background-image: url("");
+    background-image: url("documentation/galaxybckgrnd.jpg");
 }
 
+.topbanner {
+    border: solid black;
+    width: 300px;
+    height: 200px;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.circle {
+
+    height: 150px;
+    width: 150px;
+    background-color: #bbb;
+    border-radius: 50%;
+    alignment: center;
+position: relative;
+    top: 300px;
+    margin: auto;
+}
+
+img{
+    height: 200px;
+    position: relative;
+    left: 297px;
+    bottom: 90px;
+    border-radius: 50%;
+
+
+}
+p {
+    color: #08FF08;
+    font-size: 25px;
+    font-style: cursive;
+}
