@@ -35,7 +35,7 @@ position: relative;
     animation-duration: 100000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-background-image: radial-gradient(yellow, white);
+background-image: radial-gradient(yellow, red, blue);
 }
 
 @keyframes spin {
@@ -131,4 +131,32 @@ img{
 img {
     position: relative;
     bottom: 130px;
+}
+
+p{
+    color: #08FF08;
+    font-size: 20px;
+    font-family: Courier;
+}
+
+h1   {
+    animation: blinker 4s linear infinite;
+    font-family: "Copperplate Gothic Bold";
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+h2  {
+    animation: blinker 4s linear infinite;
+    font-family: "Copperplate Gothic Bold";
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
 }
