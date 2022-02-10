@@ -53,14 +53,18 @@ background-image: radial-gradient(yellow, red, blue);
 
 
 
-
+.imagebox {
+    margin: auto;
+}
 
 img{
     height: 200px;
     position: relative;
-    left: 297px;
+    left: 200px;
     bottom: 90px;
     border-radius: 50%;
+    margin: auto;
+
 
 
 }
