@@ -1,166 +1,47 @@
+.jumbotron{
+    margin:15px 30px 0px 30px;
+    border-radius:10px;
+    background-image:
+            linear-gradient(
+                    rgba(0, 0, 250, 0.25),
+                    rgba(125, 250, 250, 0.45)
+            ),
+            url("documentation/galaxybckgrnd.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color:white !important;
+    height:340px;
+}
 
-body {
-    background-image: url("documentation/galaxybckgrnd.jpg");
+.page-scroll{
+    height:5000px;
+}
+
+.btn-outline-danger{
+    color:white;
+    border-color:white;
+    border-radius:0px;
+    font-weight:100;
+    margin-top:20px;
+}
+.lead{
+    font-family:raleway;
+    font-weight:100;
+    margin-top:-10px;
 }
 
 .topbanner {
-    border: solid black;
+
     width: 300px;
     height: 200px;
     margin: auto;
-    margin-top: 50px;
     text-align: center;
-     color: #08FF08;
-}
-
-.nav-item{
     color: #08FF08;
+    padding-top: 50px;
 }
 
-
-
-
-.circle {
-
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    alignment: center;
-position: relative;
-    top: 300px;
-    margin: auto;
-
-    background-color: #0CB1C4;
-    animation-name: spin;
-    animation-duration: 100000ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-background-image: radial-gradient(yellow, red, blue);
-}
-
-@keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
-}
-
-
-
-
-
-
-
-.imagebox {
-    margin: auto;
-}
 
 img{
-    height: 200px;
-    position: relative;
-    left: 200px;
-    bottom: 90px;
-    border-radius: 50%;
-    margin: auto;
-
-
-
-}
-
-
-
-
-.dot1{
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background: pink;
-    position: relative;
-    left: 300px;
-}
-
-
-.dot2{
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background: brown;
-    position: relative;
-    bottom: -250px;
-
-}
-
-.dot3{
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background: green;
-    position: relative;
-    right: 150px;
-
-}
-
-.dot4{  height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background: blue;
-    position: relative;
-    right: 100px;
-
-
-}
-
-.dot5{
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background: darkred;
-    position: relative;
-    right: -300px;
-
-}
-
-.dot6{
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background: yellow;
-    position: relative;
-    right: -200px;
-
-}
-
-img {
-    position: relative;
-    bottom: 130px;
-}
-
-p{
-    color: #08FF08;
-    font-size: 20px;
-    font-family: Courier;
-}
-
-h1   {
-    animation: blinker 4s linear infinite;
-    font-family: "Copperplate Gothic Bold";
-}
-
-@keyframes blinker {
-    50% {
-        opacity: 0;
-    }
-}
-
-h2  {
-    animation: blinker 4s linear infinite;
-    font-family: "Copperplate Gothic Bold";
-}
-
-@keyframes blinker {
-    50% {
-        opacity: 0;
-    }
+    height: 300px;
+    width: 300px;
 }
