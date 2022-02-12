@@ -7,9 +7,10 @@
 
             url("documentation/galaxybckgrnd.jpg");
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    color:white !important;
+   /* background-attachment: fixed;*/
+    color:white;
     height:340px;
+    overflow: auto;
 }
 
 .page-scroll{
@@ -20,7 +21,6 @@
 
 .lead{
     font-family:raleway;
-    font-weight:300px;
     margin-top:-10px;
 }
 
@@ -32,12 +32,12 @@
     text-align: center;
     color: #08FF08;
     padding-top: 50px;
+
 }
 
 
 img{
-    height: 300px;
-    width: 300px;
+
     position: relative;
     bottom: 90px;
 }
@@ -83,7 +83,7 @@ img{
 h1   {
     /*animation: blinker 4s linear infinite;*/
     font-family: "Copperplate Gothic Bold";
-    text-shadow: 2px 2px #ff0000;
+    text-shadow: 2px 2px #ffcccb;
 }
 
 @keyframes blinker {
@@ -95,7 +95,7 @@ h1   {
 h2  {
    /* animation: blinker 4s linear infinite;*/
     font-family: "Copperplate Gothic Bold";
-    text-shadow: 2px 2px #ff0000;
+    text-shadow: 2px 2px #ffcccb;
 }
 
 @keyframes blinker {
@@ -111,14 +111,18 @@ h5{
 
 
 
-p{
+/*p{
     color: #08FF08;
     font-size: 30px;
     font-family: Courier;
     text-shadow: 2px 2px #ff0000;
     font-weight: bold;
-}
+}*/
 
-h1 {
+.{
+    color: #08FF08;
+    font-size: 30px;
+    font-family: Courier;
 
+    font-weight: bold;
 }
