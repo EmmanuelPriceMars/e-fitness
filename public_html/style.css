@@ -126,3 +126,43 @@ h5{
 
     font-weight: bold;
 }
+
+.effect2{
+    animation: blinker 4s linear infinite;
+    color: #08FF08;
+}
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.effect1{
+    animation: blinker 4s linear infinite;
+    color: #08FF08;
+}
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.effect3{
+    animation: blinker 4s linear infinite;
+    color: #08FF08;
+}
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.effect4{
+    animation: blinker 4s linear infinite;
+    color: #08FF08;
+}
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
