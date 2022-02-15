@@ -8,7 +8,7 @@ function GFG_Fun() {
     // Create a form dynamically
     var form = document.createElement("form");
     form.setAttribute("method", "post");
-    form.setAttribute("action", "submit.php");
+    form.setAttribute("action", "submit");
 
     // Create an input element for Full Name
     var FN = document.createElement("input");
@@ -24,7 +24,7 @@ function GFG_Fun() {
 
     // Create an input element for emailID
     var EID = document.createElement("input");
-    EID.setAttribute("type", "text");
+    EID.setAttribute("type", "email");
     EID.setAttribute("name", "emailID");
     EID.setAttribute("placeholder", "E-Mail ID");
 
@@ -36,7 +36,7 @@ function GFG_Fun() {
 
     // Create an input element for retype-password
     var RPWD = document.createElement("textarea");
-    RPWD.setAttribute("type", "password");
+    RPWD.setAttribute("type", "text");
     RPWD.setAttribute("name", "message");
     RPWD.setAttribute("placeholder", "message");
 
