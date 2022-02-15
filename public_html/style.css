@@ -119,13 +119,7 @@ h5{
     font-weight: bold;
 }*/
 
-.{
-    color: #08FF08;
-    font-size: 30px;
-    font-family: Courier;
 
-    font-weight: bold;
-}
 
 .effect2{
     animation: blinker 4s linear infinite;
