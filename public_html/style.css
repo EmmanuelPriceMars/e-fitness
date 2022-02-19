@@ -161,3 +161,52 @@ h5{
     }
 }
 
+/*
+canvas {
+    width: 50%;
+}
+.canvas-wrapper{
+    border-style: solid;
+    border-color: white;
+    width: 90%;
+    margin: 30px;
+    padding: 0px;
+}
+.center {
+    text-align: center;
+}
+.game {
+    position: relative;
+}
+#score{
+    position: absolute;
+    top:0px;
+    left:50px;
+}*/
+
+img {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    top: 20px;
+    animation-name: img;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes img {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }
+}
+
+
+.EXP{
+    font-family: Courier;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+

@@ -1,18 +1,17 @@
-
 import {Application,Router} from 'express'
 import {Request, Response} from 'express'
-import {validationResult} from "express-validator";
+
 
 
 const express = require('express')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
-const Recaptcha = require('express-recaptcha')
+const Recaptcha = require('express-recaptcha').RecaptchaV2
 const formData = require('form-data')
 const MailGun = require('mailgun.js')
 const mailgun = new MailGun(formData)
 
-const {check, ValidationResult} = require('express-validator')
+const {check, validationResult} = require('express-validator')
 const validation = [
     check('name', 'A valid name is required.').not().isEmpty().trim().escape(),
     check ('email', 'please provide a valid email.').isEmail(),
@@ -21,7 +20,7 @@ const validation = [
 
 ]
 
-const app = express()
+const app: Application = express()
 app.use(morgan('dev'))
 app.use (express.json())
 app.use(bodyParser.urlencoded({extended:false}))
@@ -55,32 +54,35 @@ const handlePostRequest = (request: Request, response: Response) => {
         return response.send(`<div class='alert alert-danger' role='alert'> <strong> holy molly!</strong> ${currentError.msg}</div>`,
         )
     }
-    const {name, email, subject, message} = request.body
+    const {name, email, subject,  message} = request.body
 
     const mailgunData = {
-        to: process.env.MAIL_RECIPIENT,
-        from: `${name} <postmaster@${process.env.MAILGUN_DOMAIN}`,
-        subject: `${email}: ${subject}`,
-        text: message
+        to:process.env.MAIL_RECIPIENT,
+        from:`${name} <postmaster@${process.env.MAILGUN_DOMAIN}>`,
+        subject: `${email}: ${(subject)}`,
+        text:message
     }
 
     mg.messages.create(process.env.MAILGUN_DOMAIN, mailgunData)
         .then((msg: any) =>
-            response.send(`<div class ='alert alert-success role='alert'> email sent </div>`)
+            response.send(`<div class ='alert alert-success role='alert'> email sent (please refresh page) </div>`)
         )
         .catch((error: any) =>
-            response.send(`<div class='alert alert-danger' role = 'alert'> Email Failed. retry.</div>`)
+            {
+                console.error(error)
+                response.send(`<div class='alert alert-danger' role = 'alert'> Email Failed.(please refresh page and try again).</div>`)}
+
         )
 
 }
 
 const indexRoute = express.Router()
 indexRoute.route ('/')
-.get(handleGetRequest)
+    .get(handleGetRequest)
     .post(recaptcha.middleware.verify,validation, handlePostRequest)
 
-    app.use('/apis', indexRoute)
+app.use('/apis', indexRoute)
 
-    app.listen(4200, () => {
+app.listen(4200, () => {
     console.log('express Successfully built')
 })

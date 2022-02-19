@@ -1,12 +1,12 @@
 version: '3'
 services:
   backend:
-    build: public_html/src
+    build: ./src
     container_name: 'backend'
     env_file:
-      - public_html/src/.env
+      - ./src/.env
     ports:
-      - 8080:4200
+      - 8090:4200
     user: "node"
     volumes:
       - ./src:/home/node/app/src
