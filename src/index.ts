@@ -59,7 +59,7 @@ const handlePostRequest = (request: Request, response: Response) => {
     const mailgunData = {
         to:process.env.MAIL_RECIPIENT,
         from:`${name} <postmaster@${process.env.MAILGUN_DOMAIN}>`,
-        subject: `${email}: ${(subject)}`,
+        subject: `${email}: ${subject} `,
         text:message
     }
 
