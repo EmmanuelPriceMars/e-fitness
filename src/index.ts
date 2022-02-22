@@ -65,12 +65,12 @@ const handlePostRequest = (request: Request, response: Response) => {
 
     mg.messages.create(process.env.MAILGUN_DOMAIN, mailgunData)
         .then((msg: any) =>
-            response.send(`<div class ='alert alert-success role='alert'> email sent (please refresh page) </div>`)
+            response.send(`<div class ='alert alert-success role='alert'> email sent successfully </div>`)
         )
         .catch((error: any) =>
             {
                 console.error(error)
-                response.send(`<div class='alert alert-danger' role = 'alert'> Email Failed.(please refresh page and try again).</div>`)}
+                response.send(`<div class='alert alert-danger' role = 'alert'> Email Failed. please try again</div>`)}
 
         )
 
